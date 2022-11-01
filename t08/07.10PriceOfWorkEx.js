@@ -2,7 +2,7 @@ function modifyTitle() {
     // Read value of title from the input field
 	var title = document.getElementById("title").value;
     // Call allCapsTitleTrimmed() function 
-	title = allCapsTitleTrimmed(title);
+	allCapsTitleTrimmed(title);
 
 }
 
@@ -12,20 +12,26 @@ function allCapsTitleTrimmed(text) {
 	// Changes the text given to it to be ALL CAPS
     text = text.toUpperCase();
 	// Return the changed text
-	return text;
+	return document.getElementById("title").value = text;
 }
 
 function calculate() {
-	var d = document.getElementById("date").value;
+	var day = document.getElementById("date").value;
 	let start = document.getElementById("startTime").value;
 	let end = document.getElementById("endTime").value;
 	let rate
 	let cost
     // Calculate length of the work as minutes.
-	let t = Math.round((end.getTime()-start.getTime())/6000);
+	let h1 = start.substr(0,2);
+	let m1 = start.substr(3,5);
+	let h2 = end.substr(0,2);
+	let m2 = end.substr(3,5);
+	let t = (h2-h1)*60;
+	t = t + (m2-m1);
 
     // If it is not Sunday  (Call isSunday() function)
-	if (isSunday(d)) {
+	let yn = isSunday(day)
+	if(yn) {
         //Calculate and show price of the repair work during the workdays
 		rate = "Sundays 72.00";
 		cost = t * 72 / 60;
@@ -36,34 +42,39 @@ function calculate() {
 		cost = t * 48 / 60;
 	};
 	// display
-	let txt = "Length of the work was "+t+" minutes.<br>The hourly price is during the "+rate+"euros.<br>The price of this repair work is "+ Number(cost).toFixed(2) +" euros";
-    return document.getElementById("answer").innerHTML = txt;
+	let txt = "Length of the work was "+t+" minutes.<br>The hourly price is during the "+rate+"euros.<br>The price of this repair work is "+ Number(cost).toFixed(2) +" euros.";
+    
+	return document.getElementById("answer").innerHTML = day;
 }
 
  // The function gets the date text in the format "dd.MM.yyyy". 
  // The function returns Boolean value true if the date is for a Sunday, otherwise false.
 function isSunday(dateText) {
 	
+	let backup = dateText
 	// Split the given date text into day, month and year parts using the subStr() method
 	let d = dateText.substr(0,2);
 	let m = dateText.substr(3,5);
-	let y = dateText.substr;
+	let y = dateText.substr(6,10);
 
 	// Create a new Date object to a variable asDate
-	var asDate = new Date();
-
+	let asDate = new Date(backup);
+	//asDate.setDate(d);
+	//asDate.setMonth(m);
+	//asDate.setFullYear(y);
 
 	// Get the day of the week with its getDay() method. Sunday is number 0 .
-	
+	let w = asDate.getDay();
 
 	// If day of the week is Sunday 
-	
+	if (w===0) {
 		// return Boolean value true
-		
+		return Boolean(true);
 	// otherwise	
-	
-       // return Boolean value false		
-	
+	} else {
+       // return Boolean value false
+	   return Boolean(false);		
+	};
 }
 
 
