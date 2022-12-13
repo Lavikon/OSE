@@ -1,0 +1,4 @@
+Scrum on yksi agilen eli ketterän kehityksen tapa. Sillä ei ole tarkkaa mallia miten ja missä järjestyksessä asiat tehdään vaan se perustuu enemmän tiimin rakenteeseen ja yhteistyöhön. Toinen oleellinen asia scrum-mallissa on aikajaksotus. Joka päivä tiimi kerääntyy ja pitää nopean kokouksen. Lisäksi kuukausittain (30 pv) pyritään saamaan aikaiseksi iteratiivista kehitystä aikaiseksi, joka viedään eteenpäin. Scrum mallissa on kolme pääroolia: 
+Product owner, joka edustaa asiakkaita ja asianomaisia. Hän varmistaa aika ajoittain, että projekti menee oikeaan suuntaa.
+Scrum master, joka johtaa kehitystiimiä ja vastaa sen tarpeisiin.
+Kehitystiimi, joka sisältää projektiin sopivat ammattilaiset ja tekevät yhteistyössä kehitystä.

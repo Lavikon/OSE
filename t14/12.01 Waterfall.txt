@@ -1,0 +1,1 @@
+﻿Waterfall on systemaattinen ohjelmiston kehitystapa, jossa jokainen vaihe tehdään lineaarisesti yksikerrallaan valmiiksi ennen kuin siirrytään seuraavaan vaiheeseen. Jokainen vaihe myös dokumentoidaan tarkasti. Tämä malli toimii ohjelmistokehitykseen missä on tarkat ennalta tiedossa olevat vaatimukset ja projektista on oltava tarkka dokumentaatio.
